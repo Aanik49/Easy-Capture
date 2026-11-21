@@ -35,6 +35,14 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".capture.QuickCaptureActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleInstance"
+            android:taskAffinity=""
+            android:theme="@style/Theme.EasyCapture.Transparent" />
+
         <service
             android:name=".capture.ScreenCaptureService"
             android:exported="false"

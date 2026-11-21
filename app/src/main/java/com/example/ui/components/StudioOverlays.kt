@@ -188,7 +188,8 @@ fun BroadcastCountdownOverlay(
     settings: CaptureSettings,
     onStartNow: () -> Unit,
     onCancel: () -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    translucentBackdrop: Boolean = false
 ) {
     // Smooth 1-second sweep animation synchronized with every countdown tick
     val secondSweep = remember(remainingSeconds) { Animatable(1f) }
@@ -208,10 +209,17 @@ fun BroadcastCountdownOverlay(
             .fillMaxSize()
             .background(
                 Brush.radialGradient(
-                    colors = listOf(
-                        Color(0xF2121722),
-                        Color(0xFA07090E)
-                    )
+                    colors = if (translucentBackdrop) {
+                        listOf(
+                            Color(0xB80E131D),
+                            Color(0xD807090E)
+                        )
+                    } else {
+                        listOf(
+                            Color(0xF2121722),
+                            Color(0xFA07090E)
+                        )
+                    }
                 )
             )
             .safeDrawingPadding()

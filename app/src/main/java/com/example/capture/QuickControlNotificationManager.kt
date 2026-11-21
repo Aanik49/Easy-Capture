@@ -141,11 +141,11 @@ object QuickControlNotificationManager {
 
         views.setOnClickPendingIntent(
             R.id.notif_btn_record,
-            createActivityPendingIntent(context, 201, QUICK_ACTION_RECORD)
+            createQuickCapturePendingIntent(context, 201, QUICK_ACTION_RECORD)
         )
         views.setOnClickPendingIntent(
             R.id.notif_btn_screenshot,
-            createActivityPendingIntent(context, 202, QUICK_ACTION_SCREENSHOT)
+            createQuickCapturePendingIntent(context, 202, QUICK_ACTION_SCREENSHOT)
         )
         views.setOnClickPendingIntent(
             R.id.notif_btn_tools,
@@ -168,6 +168,25 @@ object QuickControlNotificationManager {
         views.setOnClickPendingIntent(R.id.notif_btn_exit, exitPendingIntent)
 
         return views
+    }
+
+    private fun createQuickCapturePendingIntent(
+        context: Context,
+        requestCode: Int,
+        quickAction: String
+    ): PendingIntent {
+        val intent = Intent(context, QuickCaptureActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS or
+                Intent.FLAG_ACTIVITY_NO_ANIMATION
+            putExtra(EXTRA_QUICK_ACTION, quickAction)
+        }
+        return PendingIntent.getActivity(
+            context,
+            requestCode,
+            intent,
+            PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
+        )
     }
 
     private fun createActivityPendingIntent(
