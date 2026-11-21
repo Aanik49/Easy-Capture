@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:weightSum="5">
+
+    <LinearLayout
+        android:id="@+id/notif_btn_record"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:id="@+id/notif_icon_record"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:contentDescription="@string/quick_bar_record"
+            android:src="@drawable/ic_notif_record" />
+
+        <TextView
+            android:id="@+id/notif_label_record"
+            style="@style/TextAppearance.Compat.Notification.Info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:text="@string/quick_bar_record"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notif_btn_screenshot"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:id="@+id/notif_icon_screenshot"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:contentDescription="@string/quick_bar_screenshot"
+            android:src="@drawable/ic_notif_screenshot" />
+
+        <TextView
+            style="@style/TextAppearance.Compat.Notification.Info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:text="@string/quick_bar_screenshot"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notif_btn_tools"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:id="@+id/notif_icon_tools"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:contentDescription="@string/quick_bar_tools"
+            android:src="@drawable/ic_notif_tools" />
+
+        <TextView
+            style="@style/TextAppearance.Compat.Notification.Info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:text="@string/quick_bar_tools"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notif_btn_home"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:id="@+id/notif_icon_home"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:contentDescription="@string/quick_bar_home"
+            android:src="@drawable/ic_notif_home" />
+
+        <TextView
+            style="@style/TextAppearance.Compat.Notification.Info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:text="@string/quick_bar_home"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notif_btn_exit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:id="@+id/notif_icon_exit"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:contentDescription="@string/quick_bar_exit"
+            android:src="@drawable/ic_notif_exit" />
+
+        <TextView
+            style="@style/TextAppearance.Compat.Notification.Info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="1"
+            android:text="@string/quick_bar_exit"
+            android:textSize="11sp" />
+    </LinearLayout>
+</LinearLayout>

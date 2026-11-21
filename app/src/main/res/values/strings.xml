@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Easy Capture</string>
+
+    <!-- Navigation -->
+    <string name="nav_capture">Capture</string>
+    <string name="nav_editor">Edit</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Capture Screen -->
+    <string name="capture_ready">READY TO RECORD</string>
+    <string name="capture_recording">RECORDING LIVE</string>
+    <string name="capture_countdown">STARTING IN</string>
+    <string name="capture_paused">PAUSED</string>
+    <string name="splash_tagline">HD SCREEN CAPTURE · 1080P SNAP</string>
+    <string name="countdown_status_label">PREPARING RECORDING</string>
+    <string name="action_start_now">Start Now</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_start_recording">Start Recording</string>
+    <string name="action_stop_recording">Stop Recording</string>
+    <string name="action_pause_recording">Pause</string>
+    <string name="action_resume_recording">Resume</string>
+    <string name="action_snap_screenshot">1080p Snap</string>
+    <string name="section_recording_area">Recording Area</string>
+    <string name="section_audio_capture">Real-Time Audio</string>
+    <string name="section_output_profile">HD Output Profile</string>
+    <string name="section_floating_shutter">Stealth Floating Shutter</string>
+    <string name="area_custom_hint">Drag handles or edit exact coordinates</string>
+    <string name="custom_area_dialog_title">Choose Custom Area</string>
+    <string name="custom_area_dialog_subtitle">Drag the capture frame or enter exact percentages to set your recording region.</string>
+    <string name="custom_area_edit_button">Edit Custom Area</string>
+    <string name="custom_area_apply">Apply Area</string>
+    <string name="custom_area_reset">Reset</string>
+    <string name="floating_shutter_desc">Floating controls for silent 1080p screenshots (hidden from recording), Pause/Resume, and Stop</string>
+    <string name="storage_auto_save_note">Auto-saves directly to Movies/EasyCapture &amp; Pictures/EasyCapture</string>
+    <string name="permission_overlay_needed">Enable Overlay</string>
+    <string name="permission_overlay_active">Overlay Ready</string>
+
+    <!-- Editor Screen -->
+    <string name="editor_title">Video Editor</string>
+    <string name="editor_pick_video">Select Video to Edit</string>
+    <string name="editor_pick_subtitle">Choose any recording from device storage using Android Photo Picker to trim, crop, adjust speed, and export in HD formats.</string>
+    <string name="editor_change_video">Change Video</string>
+    <string name="editor_trim_section">Trim Timeline</string>
+    <string name="editor_crop_section">Crop Frame</string>
+    <string name="editor_adjust_section">Speed, Rotation &amp; Audio</string>
+    <string name="editor_export_section">HD Export Format</string>
+    <string name="editor_export_button">Export Video</string>
+    <string name="editor_exporting">Exporting HD Video…</string>
+
+    <!-- Settings Screen -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_appearance">Appearance</string>
+    <string name="settings_recording">Recording Defaults</string>
+    <string name="settings_floating">Floating 1080p Shutter</string>
+    <string name="settings_storage">Auto-Save Storage</string>
+    <string name="settings_permissions">Permissions &amp; Access</string>
+    <string name="settings_show_touches">Show Screen Touches</string>
+    <string name="settings_show_touches_desc">Display visual touch circles during recording when enabled</string>
+    <string name="settings_quick_bar">Top Bar Quick Controls</string>
+    <string name="settings_quick_bar_desc">Show Record, Screenshot, Tools, Home &amp; Exit bar in notifications when app opens</string>
+
+    <!-- Notifications -->
+    <string name="notif_channel_name">Easy Capture Recording</string>
+    <string name="notif_channel_desc">Controls for active screen recording and silent 1080p screenshots</string>
+    <string name="notif_recording_title">Easy Capture is recording</string>
+    <string name="notif_recording_text">Auto-saving as EasyCapture_ timestamped file</string>
+    <string name="notif_action_pause">Pause</string>
+    <string name="notif_action_resume">Resume</string>
+    <string name="notif_action_screenshot">1080p Snap</string>
+    <string name="notif_action_stop">Stop</string>
+
+    <!-- Persistent Top Bar Quick Controls -->
+    <string name="quick_bar_channel_name">Easy Capture Quick Bar</string>
+    <string name="quick_bar_channel_desc">Persistent quick controls to start recording or take screenshots anytime</string>
+    <string name="quick_bar_record">Record</string>
+    <string name="quick_bar_screenshot">Screenshot</string>
+    <string name="quick_bar_tools">Tools</string>
+    <string name="quick_bar_home">Home</string>
+    <string name="quick_bar_exit">Exit</string>
+</resources>

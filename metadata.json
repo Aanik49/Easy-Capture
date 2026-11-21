@@ -1,0 +1,6 @@
+{
+  "name": "Easy Capture",
+  "description": "Screen recording studio with real-time audio capture, custom recording area selection, stealth 1080p floating screenshot capture, dark mode, and HD multi-format video editing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
