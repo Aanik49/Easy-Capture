@@ -69,6 +69,14 @@ class FloatingShutterController(
             val container = FrameLayout(context).apply {
                 alpha = initialOpacity.coerceIn(0.35f, 1f)
                 setPadding(dp(2f), dp(2f), dp(2f), dp(2f))
+                setOnTouchListener { _, event ->
+                    if (event.actionMasked == MotionEvent.ACTION_OUTSIDE && isExpanded) {
+                        collapseToSingleButton()
+                        true
+                    } else {
+                        false
+                    }
+                }
             }
 
             // 1. Collapsed State: Single crisp round floating button
@@ -139,7 +147,8 @@ class FloatingShutterController(
                 overlayType,
                 WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or
                     WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN or
-                    WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL,
+                    WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL or
+                    WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH,
                 PixelFormat.TRANSLUCENT
             ).apply {
                 gravity = Gravity.TOP or Gravity.START
@@ -513,6 +522,6 @@ class FloatingShutterController(
     }
 
     companion object {
-        private const val AUTO_COLLAPSE_DELAY_MS = 2_000L
+        internal const val AUTO_COLLAPSE_DELAY_MS = 2_000L
     }
 }

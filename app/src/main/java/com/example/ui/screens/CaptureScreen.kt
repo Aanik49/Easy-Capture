@@ -81,6 +81,7 @@ import com.example.data.VideoExportFormat
 import com.example.data.VideoResolution
 import com.example.ui.components.AutoSaveStatusBanner
 import com.example.ui.components.BroadcastAudioMeter
+import com.example.ui.components.CollapsibleRecordingFab
 import com.example.ui.components.CustomAreaInputDialog
 import com.example.ui.components.InteractiveAreaFramePreview
 import com.example.ui.components.StudioSectionHeader
@@ -220,6 +221,20 @@ fun CaptureScreen(
             }
 
             item { Spacer(modifier = Modifier.height(12.dp)) }
+        }
+
+        // In-app collapsible floating action button when system-wide overlay isn't active
+        if (isLive && (!hasOverlayPermission || !settings.floatingButtonEnabled)) {
+            CollapsibleRecordingFab(
+                isPaused = captureState.phase == RecordingPhase.PAUSED,
+                opacity = settings.floatingButtonOpacity,
+                onStopClick = onStopRecordingClick,
+                onTogglePauseClick = onTogglePauseClick,
+                onScreenshotClick = onSnapScreenshotClick,
+                modifier = Modifier
+                    .align(Alignment.BottomEnd)
+                    .padding(16.dp)
+            )
         }
     }
 }
